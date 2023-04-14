@@ -45,5 +45,55 @@ namespace Billetes
         {
             return new Euro(dolar.cantidad * Euro.GetCotizacion());
         }
+
+        public static bool operator ==(Dolar d, Dolar d2)
+        {
+            return d.cantidad == d2.cantidad;
+        }
+
+        public static bool operator !=(Dolar d, Dolar d2)
+        {
+            return !(d == d2);
+        }
+
+        public static bool operator ==(Dolar d, Pesos p)
+        {
+            return d.cantidad == ((Dolar)p).cantidad;
+        }
+
+        public static bool operator !=(Dolar d, Pesos p)
+        {
+            return !(d == p);
+        }
+
+        public static bool operator ==(Dolar d, Euro e)
+        {
+            return d.cantidad == ((Dolar)e).cantidad;
+        }
+
+        public static bool operator !=(Dolar d, Euro e)
+        {
+            return !(d == e);
+        }
+
+        public static Dolar operator +(Dolar d, Pesos p)
+        {
+            return new Dolar(d.cantidad + ((Dolar)p).cantidad);
+        }
+
+        public static Dolar operator +(Dolar d, Euro e)
+        {
+            return new Dolar(d.cantidad + ((Dolar)e).cantidad);
+        }
+
+        public static Dolar operator -(Dolar d, Pesos p)
+        {
+            return new Dolar(d.cantidad - ((Dolar)p).cantidad);
+        }
+
+        public static Dolar operator -(Dolar d, Euro e)
+        {
+            return new Dolar(d.cantidad - ((Dolar)e).cantidad);
+        }
     }
 }

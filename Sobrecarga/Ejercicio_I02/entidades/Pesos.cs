@@ -44,7 +44,7 @@ namespace Billetes
 
         public static explicit operator Euro(Pesos pesos)
         {
-            return (Euro)pesos;
+            return (Euro)((Dolar)pesos);
         }
 
         public static bool operator ==(Pesos p, Pesos p2)
@@ -77,6 +77,24 @@ namespace Billetes
             return !(p == e);
         }
 
+        public static Pesos operator +(Pesos p, Dolar d)
+        {
+            return new Pesos(p.cantidad + ((Pesos)d).cantidad);
+        }
 
+        public static Pesos operator +(Pesos p, Euro e)
+        {
+            return new Pesos(p.cantidad + ((Pesos)e).cantidad);
+        }
+
+        public static Pesos operator -(Pesos p, Dolar d)
+        {
+            return new Pesos(p.cantidad - ((Pesos)d).cantidad);
+        }
+
+        public static Pesos operator -(Pesos p, Euro e)
+        {
+            return new Pesos(p.cantidad - ((Pesos)e).cantidad);
+        }
     }
 }

@@ -50,5 +50,55 @@ namespace Billetes
         {
             return (Pesos)((Dolar)euro);
         }
+
+        public static bool operator ==(Euro e, Euro e2)
+        {
+            return e.cantidad == e2.cantidad;
+        }
+
+        public static bool operator !=(Euro e, Euro e2)
+        {
+            return !(e == e2);
+        }
+
+        public static bool operator ==(Euro e, Pesos p)
+        {
+            return e.cantidad == ((Euro)p).cantidad;
+        }
+
+        public static bool operator !=(Euro e, Pesos p)
+        {
+            return !(e == p);
+        }
+
+        public static bool operator ==(Euro e, Dolar d)
+        {
+            return e.cantidad == ((Euro)d).cantidad;
+        }
+
+        public static bool operator !=(Euro e, Dolar d)
+        {
+            return !(e == d);
+        }
+
+        public static Euro operator +(Euro e, Pesos p)
+        {
+            return new Euro(e.cantidad + ((Euro)p).cantidad);
+        }
+
+        public static Euro operator +(Euro e, Dolar d)
+        {
+            return new Euro(e.cantidad + ((Euro)d).cantidad);
+        }
+
+        public static Euro operator -(Euro e, Pesos p)
+        {
+            return new Euro(e.cantidad - ((Euro)p).cantidad);
+        }
+
+        public static Euro operator -(Euro e, Dolar d)
+        {
+            return new Euro(e.cantidad - ((Euro)d).cantidad);
+        }
     }
 }
