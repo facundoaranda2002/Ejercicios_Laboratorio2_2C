@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_23", "Ejercicio_23\Ejercicio_23.csproj", "{F70261A1-6535-43F6-BAB5-052BF4560FAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejercicio_23", "Ejercicio_23\Ejercicio_23.csproj", "{F70261A1-6535-43F6-BAB5-052BF4560FAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moneda", "Moneda\Moneda.csproj", "{2F08D61C-5979-41E9-B872-ABDAD2A3F3E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F70261A1-6535-43F6-BAB5-052BF4560FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F70261A1-6535-43F6-BAB5-052BF4560FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F70261A1-6535-43F6-BAB5-052BF4560FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F08D61C-5979-41E9-B872-ABDAD2A3F3E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F08D61C-5979-41E9-B872-ABDAD2A3F3E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F08D61C-5979-41E9-B872-ABDAD2A3F3E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F08D61C-5979-41E9-B872-ABDAD2A3F3E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

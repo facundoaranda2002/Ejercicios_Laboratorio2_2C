@@ -61,7 +61,7 @@
             // 
             // btnCandado
             // 
-            btnCandado.ImageIndex = 1;
+            btnCandado.ImageIndex = 0;
             btnCandado.ImageList = imlCandados;
             btnCandado.Location = new Point(282, 44);
             btnCandado.Name = "btnCandado";
@@ -213,24 +213,30 @@
             // 
             // txtCotizacionPeso
             // 
+            txtCotizacionPeso.Enabled = false;
             txtCotizacionPeso.Location = new Point(658, 65);
             txtCotizacionPeso.Name = "txtCotizacionPeso";
             txtCotizacionPeso.Size = new Size(130, 23);
             txtCotizacionPeso.TabIndex = 19;
+            txtCotizacionPeso.Leave += txtCotizacionPeso_Leave;
             // 
             // txtCotizacionDolar
             // 
+            txtCotizacionDolar.Enabled = false;
             txtCotizacionDolar.Location = new Point(507, 65);
             txtCotizacionDolar.Name = "txtCotizacionDolar";
             txtCotizacionDolar.Size = new Size(130, 23);
             txtCotizacionDolar.TabIndex = 18;
+            txtCotizacionDolar.Leave += txtCotizacionDolar_Leave;
             // 
             // txtCotizacionEuro
             // 
+            txtCotizacionEuro.Enabled = false;
             txtCotizacionEuro.Location = new Point(357, 65);
             txtCotizacionEuro.Name = "txtCotizacionEuro";
             txtCotizacionEuro.Size = new Size(130, 23);
             txtCotizacionEuro.TabIndex = 17;
+            txtCotizacionEuro.Leave += txtCotizacionEuro_Leave;
             // 
             // btnConvertEuro
             // 
@@ -240,6 +246,7 @@
             btnConvertEuro.TabIndex = 20;
             btnConvertEuro.Text = "->";
             btnConvertEuro.UseVisualStyleBackColor = true;
+            btnConvertEuro.Click += btnConvertEuro_Click;
             // 
             // btnConvertDolar
             // 
@@ -249,6 +256,7 @@
             btnConvertDolar.TabIndex = 21;
             btnConvertDolar.Text = "->";
             btnConvertDolar.UseVisualStyleBackColor = true;
+            btnConvertDolar.Click += btnConvertDolar_Click;
             // 
             // btnConvertPeso
             // 
@@ -258,6 +266,7 @@
             btnConvertPeso.TabIndex = 22;
             btnConvertPeso.Text = "->";
             btnConvertPeso.UseVisualStyleBackColor = true;
+            btnConvertPeso.Click += btnConvertPeso_Click;
             // 
             // lblEuroA
             // 
@@ -289,7 +298,7 @@
             lblPesoA.TabIndex = 25;
             lblPesoA.Text = "Peso";
             // 
-            // frmConversor
+            // frmMonedas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -323,7 +332,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "frmConversor";
+            Name = "frmMonedas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Conversor";
             ResumeLayout(false);
